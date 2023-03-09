@@ -110,7 +110,7 @@ function findAlerts(curSuite: Benchmark, prevSuite: Benchmark, threshold: number
 
         if (ratio > threshold) {
             core.warning(
-                `Performance alert! Previous value was ${prev.value} and current value is ${current.value}.` +
+                `Performance alert! Test ${current.name}, previous value was ${prev.value} and current value is ${current.value}.` +
                     ` It is ${ratio}x worse than previous exceeding a ratio threshold ${threshold}`,
             );
             alerts.push({ current, prev, ratio });
